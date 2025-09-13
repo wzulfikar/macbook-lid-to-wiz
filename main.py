@@ -32,7 +32,9 @@ async def main():
             if brightness > angle_close:
                 await light.turn_on(PilotBuilder(brightness = brightness))
             else:
+                print("  turning off...")
                 await light.turn_off()
+
 
 if __name__ == "__main__":
     asyncio.run(main())
